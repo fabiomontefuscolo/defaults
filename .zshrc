@@ -19,9 +19,12 @@ bindkey \^U backward-kill-line
 alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,__pycache__}'
 alias ls='ls --almost-all --color'
 
+export LESS="-XFR"
 export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_PICTURES_DIR="$HOME/Pictures"
 
 mkdir -m 700 -p $XDG_CACHE_HOME
+mkdir -m 750 -p $XDG_PICTURES_DIR
 mkdir -p "$HOME/.local/bin"
 
 export PATH="$PATH:$HOME/.local/bin"
