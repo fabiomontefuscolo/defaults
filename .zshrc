@@ -20,7 +20,6 @@ alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,_
 alias ls='ls --almost-all --color'
 
 export XDG_CACHE_HOME="$HOME/.cache"
-export NPM_CONFIG_PREFIX="${HOME}/.local"
 
 mkdir -m 700 -p $XDG_CACHE_HOME
 mkdir -p "$HOME/.local/bin"
