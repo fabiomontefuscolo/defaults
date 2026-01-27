@@ -3,6 +3,9 @@ export HISTSIZE=100000
 export SAVEHIST=100000
 setopt SHARE_HISTORY
 
+mkdir -p "$HOME/.local/bin"
+export PATH="$HOME/.local/bin:$PATH"
+
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="ys"
 
@@ -22,12 +25,6 @@ alias ls='ls --almost-all --color'
 export LESS="-XFR"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_PICTURES_DIR="$HOME/Pictures"
-
-mkdir -m 700 -p $XDG_CACHE_HOME
-mkdir -m 750 -p $XDG_PICTURES_DIR
-mkdir -p "$HOME/.local/bin"
-
-export PATH="$PATH:$HOME/.local/bin"
 
 [ -f "$HOME/.zshenv" ] && source "$HOME/.zshenv"
 # zprof > $HOME/.zshrc.prof
