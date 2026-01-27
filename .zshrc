@@ -14,10 +14,11 @@ ZSH_THEME="ys"
 zstyle ':omz:update' mode disabled
 DISABLE_AUTO_UPDATE=true
 
-plugins=(direnv fzf git)
+plugins=(direnv fzf git fabric-ai)
 source $ZSH/oh-my-zsh.sh
 
-bindkey \^U backward-kill-line
+bindkey '^U' backward-kill-line
+bindkey '^P' up-line-or-beginning-search
 
 alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,__pycache__}'
 alias ls='ls --almost-all --color'
