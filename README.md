@@ -44,6 +44,8 @@ curl -sL https://github.com/fabiomontefuscolo/defaults/archive/refs/heads/main.t
 
 | Shortcut | Action |
 |---|---|
+| `Alt + Tab` | Window switcher (all workspaces) |
+| `Super + Tab` | Window switcher (all workspaces) |
 | `Super + ←/→/↑/↓` | Move focus |
 | `Super + Shift + ←/→/↑/↓` | Swap window in tiling layout |
 | `Super + P` | Toggle pseudotile (dwindle) |
