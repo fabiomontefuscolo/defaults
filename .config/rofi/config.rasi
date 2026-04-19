@@ -10,12 +10,12 @@ configuration {
     font:               "JetBrains Mono 14";
 
     /* Behaviour */
-    kb-cancel:          "Escape,Super+space";
+    kb-cancel:          "Escape";
     kb-row-up:          "Up,Control+p";
     kb-row-down:        "Down,Control+n";
     kb-accept-entry:    "Return,KP_Enter";
-    kb-mode-next:       "Tab";
-    kb-mode-previous:   "ISO_Left_Tab";
+    kb-mode-next:       "Super+Tab";
+    kb-mode-previous:   "Super+shift+Tab";
 
     cycle:              false;
     sorting-method:     "fzf";
