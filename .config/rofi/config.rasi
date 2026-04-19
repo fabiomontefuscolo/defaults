@@ -1,0 +1,137 @@
+/* Rofi config — macOS Spotlight-style launcher */
+/* Docs: https://github.com/davatorium/rofi */
+
+configuration {
+    modi:               "drun,run,window";
+    show-icons:         true;
+    icon-theme:         "Papirus-Dark";
+    drun-display-format: "{name}";
+    window-format:      "{w} · {t}";
+    font:               "JetBrains Mono 14";
+
+    /* Behaviour */
+    kb-cancel:          "Escape,Super+space";
+    kb-row-up:          "Up,Control+p";
+    kb-row-down:        "Down,Control+n";
+    kb-accept-entry:    "Return,KP_Enter";
+    kb-mode-next:       "Tab";
+    kb-mode-previous:   "ISO_Left_Tab";
+
+    cycle:              false;
+    sorting-method:     "fzf";
+    matching:           "fuzzy";
+}
+
+/* ── Theme ─────────────────────────────────────────────────────────────── */
+* {
+    bg:           rgba(20, 20, 28, 0.92);
+    bg-alt:       rgba(30, 30, 42, 0.95);
+    fg:           #cdd6f4;
+    fg-dim:       #6c7086;
+    accent:       #89b4fa;
+    urgent:       #f38ba8;
+    selected-bg:  rgba(137, 180, 250, 0.18);
+    border-col:   rgba(255, 255, 255, 0.08);
+
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+window {
+    width:            660px;
+    transparency:     "real";
+    background-color: @bg;
+    border:           1px solid;
+    border-color:     @border-col;
+    border-radius:    14px;
+    padding:          0;
+    location:         center;
+    anchor:           center;
+    x-offset:         0;
+    y-offset:        -80px;   /* Slightly above center, like Spotlight */
+}
+
+mainbox {
+    background-color: transparent;
+    padding:          0;
+    children:         [inputbar, listview];
+}
+
+/* ── Input bar ──────────────────────────────────────────────────────────── */
+inputbar {
+    background-color: transparent;
+    border:           0 0 1px 0;
+    border-color:     @border-col;
+    padding:          14px 18px;
+    children:         [prompt, entry];
+}
+
+prompt {
+    background-color: transparent;
+    text-color:       @accent;
+    padding:          0 8px 0 0;
+    font:             "JetBrains Mono Bold 14";
+}
+
+entry {
+    background-color: transparent;
+    text-color:       @fg;
+    placeholder:      "Search apps…";
+    placeholder-color: @fg-dim;
+    cursor:           text;
+    cursor-color:     @accent;
+}
+
+/* ── Results list ───────────────────────────────────────────────────────── */
+listview {
+    background-color: transparent;
+    padding:          8px 8px;
+    lines:            8;
+    columns:          1;
+    fixed-height:     false;
+    scrollbar:        false;
+    spacing:          2px;
+}
+
+element {
+    background-color: transparent;
+    border-radius:    8px;
+    padding:          8px 10px;
+    spacing:          10px;
+    children:         [element-icon, element-text];
+    orientation:      horizontal;
+    cursor:           pointer;
+}
+
+element selected.normal {
+    background-color: @selected-bg;
+}
+
+element.urgent {
+    text-color: @urgent;
+}
+
+element-icon {
+    size:             24px;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    vertical-align:   0.5;
+}
+
+element-text selected {
+    text-color: @fg;
+}
+
+/* No results message */
+message {
+    padding: 12px 18px;
+}
+
+textbox {
+    background-color: transparent;
+    text-color:       @fg-dim;
+}
