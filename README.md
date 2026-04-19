@@ -36,7 +36,7 @@ curl -sL https://github.com/fabiomontefuscolo/defaults/archive/refs/heads/main.t
 | `Super + Return`    | Terminal (kitty)    |
 | `Super + Q`         | Close window        |
 | `Super + E`         | File manager        |
-| `Super + V`         | Toggle floating     |
+| `Super + Shift + V` | Toggle floating     |
 | `Super + F`         | Maximize window     |
 | `Super + Shift + F` | True fullscreen     |
 
@@ -93,7 +93,8 @@ curl -sL https://github.com/fabiomontefuscolo/defaults/archive/refs/heads/main.t
 | `Ctrl+Shift+Tab`          | Previous tab                                           |
 | `Ctrl+Alt+1–5`            | Jump to tab                                            |
 | `Ctrl+Shift+B`            | **Broadcast input to all panes** (press again to stop) |
-| `Ctrl+Shift+C / V`        | Copy / Paste                                           |
+| `Super+C / Super+V`       | Copy / Paste (macOS-style)                             |
+| `Ctrl+Shift+C / V`        | Copy / Paste (alternative)                             |
 | `Ctrl+= / Ctrl+-`         | Font size up / down                                    |
 | `Ctrl+Shift+Backspace`    | Reset font size                                        |
 | `Ctrl+Shift+Page Up/Down` | Scroll page up / down                                  |
