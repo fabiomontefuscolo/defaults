@@ -1,4 +1,4 @@
-// Waybar config — macOS-style top bar for Hyprland
+// Waybar config — top bar for Sway
 // Docs: https://github.com/Alexays/Waybar/wiki
 {
     "layer": "top",
@@ -9,33 +9,21 @@
     "margin-left": 0,
     "margin-right": 0,
 
-    "modules-left":   ["hyprland/workspaces", "hyprland/window"],
+    "modules-left":   ["sway/workspaces", "sway/window"],
     "modules-center": [],
     "modules-right":  ["pulseaudio", "network", "battery", "clock", "tray"],
 
     // ── Left ──────────────────────────────────────────────────────────────────
-    "hyprland/workspaces": {
-        "format": "{id}",
+    "sway/workspaces": {
+        "format": "{name}",
         "on-click": "activate",
         "sort-by-number": true,
-        "active-only": false,
-        "all-outputs": false,
-        "persistent-workspaces": {
-            "*": [1, 2, 3, 4, 5]
-        }
+        "all-outputs": false
     },
 
-    "hyprland/window": {
+    "sway/window": {
         "format": "{}",
-        "max-length": 60,
-        "separate-outputs": true,
-        "rewrite": {
-            // Strip common suffixes so the bar doesn't get cluttered
-            "(.*) — Brave": "$1",
-            "(.*) - Brave": "$1",
-            "(.*) - Zed": "$1",
-            "(.*) - neovim": "$1"
-        }
+        "max-length": 60
     },
 
     // ── Center ────────────────────────────────────────────────────────────────
