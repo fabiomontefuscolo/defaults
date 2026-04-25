@@ -7,7 +7,7 @@ configuration {
     icon-theme:         "Papirus-Dark";
     drun-display-format: "{name}";
     window-format:      "{w} · {t}";
-    font:               "JetBrains Mono 14";
+    font:               "Hack Nerd Font 14";
 
     /* Behaviour */
     kb-cancel:          "Escape";

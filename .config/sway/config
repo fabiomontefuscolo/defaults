@@ -32,7 +32,7 @@ input type:touchpad {
 ### Autostart
 exec waybar
 exec dunst
-exec_always pkill swaybg; swaybg -m fill -i ~/Pictures/sway-wallpaper.png
+exec swaybg -m fill -i ~/Pictures/sway-wallpaper.png
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec nm-applet --indicator
 exec blueman-applet
@@ -42,13 +42,13 @@ exec gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 exec gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 
 ### Look and feel
-font pango:JetBrains Mono 11
-gaps inner 5
-gaps outer 8
-default_border pixel 2
-default_floating_border pixel 2
-client.focused          #89b4fa #89b4fa #1e1e2e #89b4fa #89b4fa
-client.unfocused        #595959 #1e1e2e #6c7086 #595959 #595959
+font pango:Hack Nerd Font 11
+gaps inner 2
+gaps outer 0
+default_border pixel 0
+default_floating_border pixel 1
+client.focused          #397ea5 #89b4fa #1e1e2e #89b4fa #89b4fa
+client.unfocused        #090404 #1e1e2e #6c7086 #595959 #595959
 
 ### Key bindings — defaults from /etc/sway/config
 bindsym $mod+Return exec $term

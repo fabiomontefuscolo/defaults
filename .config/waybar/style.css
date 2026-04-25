@@ -1,7 +1,7 @@
 /* Waybar style — macOS-inspired dark floating bar */
 
 * {
-    font-family: "JetBrains Mono", "Noto Sans Mono", monospace;
+    font-family: "Hack Nerd Font", "Noto Sans Mono", monospace;
     font-size: 13px;
     font-weight: 500;
     border: none;

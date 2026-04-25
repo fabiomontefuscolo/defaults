@@ -12,8 +12,8 @@ W, H    = 2560, 1440
 OUT     = Path.home() / "Pictures" / "sway-wallpaper.png"
 CONFIG  = Path.home() / ".config" / "sway" / "config"
 
-FONT_REG  = "/usr/share/fonts/noto/NotoSansMono-Regular.ttf"
-FONT_BOLD = "/usr/share/fonts/noto/NotoSansMono-Bold.ttf"
+FONT_REG  = "/usr/share/fonts/TTF/HackNerdFont-Regular.ttf"
+FONT_BOLD = "/usr/share/fonts/TTF/HackNerdFont-Bold.ttf"
 
 # ── Catppuccin Mocha ──────────────────────────────────────────────────────────
 BG      = "#1e1e2e"
