@@ -27,5 +27,4 @@ export LESS="-XFR"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_PICTURES_DIR="$HOME/Pictures"
 
-[ -f "$HOME/.zshenv" ] && source "$HOME/.zshenv"
 # zprof > $HOME/.zshrc.prof
