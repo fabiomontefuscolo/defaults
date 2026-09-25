@@ -124,6 +124,25 @@ Run `hyprctl monitors` to get your monitor names.
 
 ---
 
+### Keyboard remapping (keyd)
+**File:** `.config/keyd/default.conf` — Caps Lock becomes a navigation layer
+(vim arrows `Caps+H/J/K/L`, word jump `Caps+W/B`, Home/End `Caps+A/E`, etc.)
+
+`keyd` is a system daemon and only reads `/etc/keyd/`, so it needs a one-time
+symlink after installing the dotfiles:
+
+```shell
+sudo pacman -S keyd
+sudo mkdir -p /etc/keyd
+sudo ln -s ~/.config/keyd/default.conf /etc/keyd/default.conf
+sudo systemctl enable --now keyd
+```
+
+After editing the config, run `keyd check ~/.config/keyd/default.conf` to
+validate, then `sudo keyd reload` to apply.
+
+---
+
 ### Default apps
 **File:** `.config/hypr/hyprland.conf` — `### MY PROGRAMS ###` section
 
@@ -220,6 +239,7 @@ hyprland waybar rofi dunst swaybg kitty
 xdg-desktop-portal-hyprland polkit-gnome
 network-manager-applet blueman pavucontrol
 grim slurp playerctl brightnessctl
+keyd
 ```
 
 Optional for better icons/fonts:
